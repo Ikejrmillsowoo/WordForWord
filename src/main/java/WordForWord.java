@@ -53,6 +53,7 @@ public class WordForWord {
 
 
         wfw.print();
+        wfw.letterFrequency("kilimanjarro");
     }
 
     public String toString() {
@@ -130,7 +131,7 @@ public class WordForWord {
 
     }
 
-    public double frequency(String word){
+    public HashMap frequency(String word){
         HashMap<Character, Long> newMap = new HashMap<>();
 //       if (input == null || input.trim().isEmpty()) {
 //        throw new IllegalArgumentException("String cannot be empty or null");
@@ -141,7 +142,7 @@ public class WordForWord {
             newMap.put(c, newMap.getOrDefault(c, 0L) + 1);
         }
         System.out.println("letterFrequency" +newMap);
-        return 0.0;
+        return newMap;
 
     }
 
